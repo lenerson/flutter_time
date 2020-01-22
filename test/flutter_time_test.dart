@@ -1,9 +1,9 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:time/time.dart';
+import 'package:flutter_time/flutter_time.dart';
 
 void main() {
-  const MethodChannel channel = MethodChannel('time');
+  const MethodChannel channel = MethodChannel('flutter_time');
 
   TestWidgetsFlutterBinding.ensureInitialized();
 
@@ -17,7 +17,7 @@ void main() {
     channel.setMockMethodCallHandler(null);
   });
 
-  test('getPlatformVersion', () async {
-    expect(await Time.platformVersion, '42');
+  test('autoTimeIsEnable', () async {
+    expect(await FlutterTime.autoTimeIsEnable, false);
   });
 }

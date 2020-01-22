@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
-import 'package:time/time.dart';
+
+import 'package:flutter_time/flutter_time.dart';
 
 void main() => runApp(MyApp());
 
@@ -23,7 +24,7 @@ class _MyAppState extends State<MyApp> {
     bool autoTimeIsEnable;
     // Platform messages may fail, so we use a try/catch PlatformException.
     try {
-      autoTimeIsEnable = await Time.autoTimeIsEnable;
+      autoTimeIsEnable = await FlutterTime.autoTimeIsEnable;
     } on Exception {
       autoTimeIsEnable = false;
     }

@@ -1,4 +1,4 @@
-package io.flutter.plugins.time_example;
+package io.flutter.plugins.flutter_time_example;
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity;

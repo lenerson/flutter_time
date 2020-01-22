@@ -1,4 +1,4 @@
-# Flutter Time
+# flutter_time
 
 Plugin to handle and get time info.
 

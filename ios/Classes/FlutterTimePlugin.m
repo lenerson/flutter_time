@@ -1,11 +1,11 @@
-#import "TimePlugin.h"
+#import "FlutterTimePlugin.h"
 
-@implementation TimePlugin
+@implementation FlutterTimePlugin
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
   FlutterMethodChannel* channel = [FlutterMethodChannel
-      methodChannelWithName:@"time"
+      methodChannelWithName:@"flutter_time"
             binaryMessenger:[registrar messenger]];
-  TimePlugin* instance = [[TimePlugin alloc] init];
+  FlutterTimePlugin* instance = [[FlutterTimePlugin alloc] init];
   [registrar addMethodCallDelegate:instance channel:channel];
 }
 

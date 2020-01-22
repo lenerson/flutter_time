@@ -1,6 +1,6 @@
-# time_example
+# flutter_time_example
 
-Demonstrates how to use the time plugin.
+Demonstrates how to use the flutter_time plugin.
 
 ## Getting Started
 
