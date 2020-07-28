@@ -10,8 +10,10 @@
 }
 
 - (void)handleMethodCall:(FlutterMethodCall*)call result:(FlutterResult)result {
-  if ([@"getPlatformVersion" isEqualToString:call.method]) {
-    result([@"iOS " stringByAppendingString:[[UIDevice currentDevice] systemVersion]]);
+  if ([@"autoTimeIsEnable" isEqualToString:call.method]) {
+    NSDictionary *pref = [[NSUserDefaults standardUserDefaults] persistentDomainForName:@"com.apple.timed"];
+    BOOL autotime = [[pref objectForKey:@"TMAutomaticTimeEnabled"] boolValue];
+    result([NSNumber numberWithBool:autotime]);
   } else {
     result(FlutterMethodNotImplemented);
   }
